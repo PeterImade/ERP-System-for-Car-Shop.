@@ -1,0 +1,17 @@
+# Use skatesham/skatesham-github user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:alpine3.14
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: skatesham
+      POSTGRES_PASSWORD: skatesham-github
+
+  adminer:
+    image: adminer
+    ports:
+      - 9000:8080
